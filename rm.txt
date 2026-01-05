@@ -1,0 +1,16 @@
+takeown /f "C:\Hexnode" /r /d y
+icacls "C:\Hexnode" /grant administrators:F /t
+takeown /f "C:\Hexnode Credential Provider" /r /d y
+icacls "C:\Hexnode Credential Provider" /grant administrators:F /t
+
+
+or 
+
+1. go to C:\ in file explorer
+2. select hexnode folder and go to properties on right click -> security -> advanced -> owner change -> provide username -> replace subdirectories clicked -> apply -> ok
+stop hexnode applications 
+1. start command prompt as administrator
+2. taskkill /IM HexnodeAgent.exe /IM HexnodeUpdater.exe /IM postgres.exe /f
+delete hexnode folder
+1. go to c:\ in file explorer
+2. delete hexnode folder
